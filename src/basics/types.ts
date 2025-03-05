@@ -28,20 +28,21 @@ export function addingStringsWithTypes(
  * - The age should be a number
  * - What is the correct return type ?
  */
-export function addTheRequiredTypes(user, age) {
+export function addTheRequiredTypes(user: string, age: number): number {
   // The purpose of this function is not important, you just have to complete the types
   return user.length * age;
 }
 
 /**
- * For the next function, we want tou count the number of elements in an array.
+ * For the next function, we want to count the number of elements in an array.
  * The user must give and array as parameter, but the type in the array is not important
  * You can deduce the return type of the function
  */
 export function countElementsInAnArrayOfUnknown(
   array: unknown[],
-) /** Return type ? */ {
+): number /** Return type ? */ {
   // Write your code here
+  return array.length
 }
 
 /**
@@ -51,6 +52,10 @@ export function countElementsInAnArrayOfUnknown(
  *
  * Complete the types and write the logic
  */
-export function arrayOfStringsToArrayOfStringLength(array) {
+export function arrayOfStringsToArrayOfStringLength(array: string[]) {
   // Write your code here
+  const newArray = array.map((e) => {
+    return e.length
+  })
+  return newArray
 }
