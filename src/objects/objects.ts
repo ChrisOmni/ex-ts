@@ -1,3 +1,5 @@
+import { filterStringByLength } from "../arrays/arrays.ts";
+
 /**
  * With typescript, you can use types with javascript objects.
  *
@@ -26,6 +28,8 @@ export type User2 = {
  */
 export function returnObjects(): [User1, User2] {
   // Write your code here
+  const arr: [User1, User2] = [{first_name: "toto", last_name: "tutu"}, {first_name: "", last_name: ""}]
+  return arr
 }
 
 /**
@@ -37,4 +41,8 @@ export function returnObjects(): [User1, User2] {
  */
 export type YourDetailedUser = {
   // Write your code here
-};
+  user_name: string;
+  birth_date: Date;
+  emails: string[];
+  address: {street: string; city: string; zip: number;}
+}
