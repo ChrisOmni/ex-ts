@@ -31,13 +31,10 @@ export function filterStringByLength(
   for (let i: number = 0; i < array.length; i++) {
     if (array[i].length >= minLength && array[i].length <= maxLength) {
       newArr.push(array[i])
-      console.log(newArr)
     }
   }
   return newArr
 }
-
-console.log(filterStringByLength(["Bob", "Bonjour", "i", "ie","helloo"], 2, 6))
 
 export function getOnlyTheLowercaseLettersOfTheString(string: string): string {
   // Write your code here
